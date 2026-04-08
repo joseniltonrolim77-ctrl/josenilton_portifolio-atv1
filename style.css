@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: url("https://thumbs.dreamstime.com/b/conceito-global-da-tecnologia-digital-17575170.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    max-width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+img{
+    width: 100px;
+}
+#img-perfil{
+    width: 150px; 
+    border-radius: 50%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(127, 255, 212, 0.505);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+}
+button{
+    margin-left: 15px;
+    color: white;
+    padding: 7px;
+    background-color: rgb(2, 48, 32);
+    border-radius: 15px;
+    font-size: 15px;
+}
+#Sobre{
+     display: flex;
+     flex-direction: column;
+     height: 400px;
+     background-color: rgba(127, 255, 212, 0.505);
+     padding: 25px;
+     border-radius: 15px;
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+}
+#Infor{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#Tecnologias{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-around;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(127, 255, 212, 0.505);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+#linkedin{
+     width: 20px;
+}
+#Projetos{
+    max-width: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(127, 255, 212, 0.505);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 15px;
+
+}
+@media (max-width: 870px) {
+    header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
