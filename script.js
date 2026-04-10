@@ -31,7 +31,7 @@ projetos.map((e)=>{
     // Aqui criamos a imagem de cada projeto
     let imgProjeto = document.createElement("img");
     imgProjeto.src = e.imgProjeto;
-    imgProjeto.style.width = "100px";
+    imgProjeto.style.width = "80px";
 
     cardProjeto.appendChild(nomeprojeto);
     cardProjeto.appendChild(imgProjeto);
