@@ -86,16 +86,18 @@ footer{
     backdrop-filter: blur(10px);
     border-radius: 15px;
     margin-top: 15px;
-
+    font-size: 10px;
 }
 @media (max-width: 870px) {
     header {
         padding: 20px 5%;
         flex-wrap: wrap;
         justify-content: center;
+        font-size: 15px;
     }
     footer {
         flex-wrap: wrap;
         justify-content: center;
+        font-size: 10px;
     }
 }
