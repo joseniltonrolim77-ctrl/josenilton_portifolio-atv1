@@ -1,44 +1,138 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Potifolio</title>
+    <title>Josenilton Landim | Desenvolvedor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <h1> Josenilton Landim</h1>
-      <nav>
-          <button>Inicio</button>
-          <button>Sobre mim</button>
-          <button>Projetos</button>
-      </nav>
+
+    <!-- ===== CABEÇALHO COM MENU ===== -->
+    <header id="cabecalho">
+        <nav id="navbar">
+            <div class="nav-container">
+                <span class="nav-logo">JL</span>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#projetos">Ver Projetos</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
     </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main>
-         <section id="Sobre">
-            <div id="Infor">
-                <img id="img-perfil" src="./perfil.jpeg" >
-                <h2>Sobre mim</h2>
-                <h3> Olá sou Josenilton, aluno do curso de Tecnologia em Sistemas para Internet pela AUPI do polo da cidade de Cristino Castro Piauí</h3>
-            </div>
-            <div id="Tecnologias">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" >
-                <img src="data:image/png;base64,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" >
-                <img src="data:image/png;base64,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" >
-            </div>
-         </section>
-         <section id="Projetos">
-                
-         </section>
-    </main>
-    <footer>
-        <h4>@2026 Josenilton Landim</h4>
-        <h4>joseniltonrolim77@gmail.com</h4>
-        <div>
-            <img id="linkedin" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAACUCAMAAABVwGAvAAAAh1BMVEX///8AjeXN5/QAgdv///0AjecAhOOs0eyt1O4AieQIjd/W5vM4l90Ah+UAg+AAieYAht3F4vKUxei+3fQAf99cq+CgyOfF3fNEnuFwtN7P4vOFu+L1/P1/uuTN4e4AddKRwuyy2e1truPm8Pcxj9d5tONOod3Z7vfm9vlZn9U2k+EAg9RNmdl5CtLOAAAE8ElEQVR4nO2bDXOqOhCGk5JFQCGo1GtrtPWTHs75/7/vQFDYAN5OJUHunbxjHRuY5JnN12aTEGJlZWVlZWVlZWVlZWVlZWX1/xFj8rv40Ue33LTTycy1ZMuItqyqLIscxXH6okHTo9CJVvIRsTrMYkeD4tlhpRNQ1oU38zlQKD49RYHzk6evcvOcxCbxqUb5yUabAXPrbSPQSUcpRFumyYCMTBK9cDSv4WSih46Qr0yz7SRh9qUJb+HrxwMafuqpXbE2gEfBX+vpHanufiHpgDqpFvPNEzN4yVzL1OYl1EDbA+p6RMfg4rkduWsgdCfG8HSowOtP1209OXuOFS+Mfp+y2O034JjCg/g8z9PF/hJLJ2ZUeACxV3i8+Ucs+gyJpqy3lIsO6Qdu4sf5TOAB+IfSdNLT+po97geasZ6T1o8YWfFx4cEM5cnISzguPP6Kh3r25Yyr5/qv6BEbH95MyXM+ssqF5KV+xNj5YTpDPTev3VvEhZE0GBde3tL8xY2PiR7DnqlZA+jmmm168Xt4fqbmXOCzRXo8zs89ZjRjeHIRHTlBHIX9XD6T7igdszt6Rbw5e9BogYC+1V/m8ZrxsFZiiZu7NpyHIee+f8dnNTMsUxog3ZJxUsESBpftZLfbvXuLwyzuHH5MDcvTWpNA2iVa1ElpBpQn510VomDH5bprJW8GL3yrw/NkKs0HkYfSTn54ScugaomX/82zdlcyhlfrPZBtLcLB2FP0Jlhzgf3Snl8GwJuWeI5XpTASnBlp4eWz81OsJyvXqa3HxC/BSMfWitf0DM30XBWvTIuWdZJIuyMn4rUxQZvBczf/jkfu7fksfTCPR7/Fuxd3aoaoDVVuG4828dh1GaySHrhxPGjgxbLCnCZe/i0EUQ3JJuEAePwT49E2Xm6z4+r08fHx+22qZJRGA1QuX2C8DusVoQ0ZGoIwSHF6Y9FpqO0peOVggfHyFcifWyPjf9DeChPZ4Hi0hUfY6tbGQOkzjKz9ofH8clLDeOJSU/AzxrsYxwMFj/0jCwRnjgo6xpWTSv11Pb0x9sqHxovbeC/V/mXuJgf12DISPM+trUcdBc9826PuCuN1VO4Kj74JenkceAuEB06N8Dy8WMFzx4eH3v/ElTs4XqjgxR14bjceGR5v2YV3x3pPwPtJ5RIyAB6E+ITHsiww3qG0Da9mflDa3gCTWr7WUPCi0np38eJR4L1jvLCBV0ULnoAHLeu91W1P4rEn4jklHvbat3jWiPFyYwh/z/XQs+XVP8d45/8KHgyPR909xiu3wwMFj9PKoSr8vfrJ4HheuTYcEV6C8fblwDImPLzsuVqPTlFBdaxCxRtkpaZa7xq0C0aEh6f/Ek+t3OfiuRhvf8U7ojSl7WU4pyHGPZghZaVDRZU0tEmkvj1AdLRYW1fi1aaVenAa7VcB8OvLAObx1MKr8rrSmv82d96MbTe3/1PS7rCqeKALb2/ieCFIPB2aR9+X9gieMkI9rtQxg+ekWipXqE6uLjxYCy2XXtiCw/fl/RiPf7J7OyA/k4kj/QDZsb0v+IiKCxG9zzU02PKOMdF144qxs+Zj80DDrR7bST6x0XtuHpKN0EZXAHon7kOfY8A1Gvh+pvEqk8RjYnXI9F0E00xH9F6j09fuSrzrgTjW95KkeldylBo1nJWVlZWVlZWVlZWVlZWVldUj+gvkF2AKsIrd4QAAAABJRU5ErkJggg==" >
+
+    <!-- Apresentação -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Ola, eu sou</p>
+            <h1 class="hero-name">Josenilton Landim</h1>
+            <h2 class="hero-title">Desenvolvedor de Sistemas para Internet</h2>
+            <p class="hero-desc">
+                Estudante apaixonado por tecnologia, criando solucoes digitais com proposito.
+                Polo AUPI - Cristino Castro, Piaui.
+            </p>
         </div>
-    </footer> 
+        <div class="hero-visual">
+            <div class="profile-ring-outer">
+                <div class="profile-ring-inner">
+                    <img id="img-perfil" src="./perfil.jpeg" alt="Foto de perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO 1: SOBRE MIM ===== -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conheca-me</span>
+                <h2 class="section-title">Sobre Mim</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Sou aluno do curso de <strong>Tecnologia em Sistemas para Internet</strong>
+                        pela <strong>AUPI</strong>, polo de Cristino Castro - Piaui. Tenho paixao por
+                        desenvolvimento web e mobile, sempre buscando aprimorar minhas habilidades e
+                        criar projetos que impactem positivamente a vida das pessoas.
+                    </p>
+                    <ul class="about-details">
+                        <li><i class="fas fa-map-marker-alt"></i> Cristino Castro, Piaui</li>
+                        <li><i class="fas fa-graduation-cap"></i> Tecnologia em Sistemas para Internet</li>
+                        <li><i class="fas fa-envelope"></i> joseniltonrolim77@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="skills-box">
+                    <h3>Tecnologias</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO 2: MEUS PROJETOS ===== -->
+    <section id="projetos" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Meu Trabalho</span>
+                <h2 class="section-title">Projetos</h2>
+            </div>
+            <div id="Projetos" class="projects-grid"></div>
+        </div>
+    </section>
+
+    </main><!-- fim do main -->
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer id="contato">
+        <div class="footer-content">
+            <h3 class="footer-name">Josenilton Landim</h3>
+            <p class="footer-sub">Desenvolvedor em formacao - Cristino Castro, PI</p>
+            <div class="footer-links">
+                <a href="mailto:joseniltonrolim77@gmail.com" class="footer-link">
+                    <i class="fas fa-envelope"></i>
+                    joseniltonrolim77@gmail.com
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Josenilton Landim. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script defer src="script.js"></script>
 </body>
 </html>
