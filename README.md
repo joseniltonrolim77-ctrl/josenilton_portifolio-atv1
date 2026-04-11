@@ -1,4 +1,4 @@
-# 💼 Portfólio Profissional — Josenilton Landim
+# 💼 Portfólio — Josenilton Landim
 
 Primeira versão do portfólio pessoal desenvolvido como atividade prática do curso de **Tecnologia em Sistemas para Internet** — AUPI, polo de Cristino Castro, Piauí.
 
